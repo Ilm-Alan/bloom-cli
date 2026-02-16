@@ -1,7 +1,7 @@
 ---
 name: Bloom
 description: "Download, install, and run Bloom"
-author: Mistral AI
+author: Ilm-Alan
 
 inputs:
   prompt:
@@ -9,8 +9,8 @@ inputs:
     required: true
     default: |
       You are a helpful assistant
-  MISTRAL_API_KEY:
-    description: API Key for AI Studio
+  POLLINATIONS_API_KEY:
+    description: API Key for Pollinations
     required: true
   install_python:
     description: |
@@ -51,7 +51,7 @@ runs:
       shell: bash
       working-directory: ${{ github.action_path }}
       env:
-        MISTRAL_API_KEY: "${{ inputs.MISTRAL_API_KEY }}"
+        POLLINATIONS_API_KEY: "${{ inputs.POLLINATIONS_API_KEY }}"
         PROMPT_INPUT: "${{ inputs.prompt }}"
       run: |
         cd "${{ github.workspace }}"

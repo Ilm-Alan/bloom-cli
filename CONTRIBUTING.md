@@ -1,58 +1,27 @@
 # Contributing to Bloom
 
-Thank you for your interest in Bloom! We appreciate your enthusiasm and support.
+Thank you for your interest in contributing to Bloom! We welcome contributions of all kinds.
 
-## Current Status
+## Ways to Contribute
 
-**Bloom is in active development** — our team is iterating quickly and making lots of changes under the hood. Because of this pace, we may be slower than usual when reviewing PRs and issues.
+- **Bug reports** — Help us find and fix issues
+- **Feature requests** — Share ideas for new functionality
+- **Code contributions** — Submit pull requests with fixes or features
+- **Documentation** — Improve guides, fix typos, or add missing pieces
 
-**We especially encourage**:
-
-- **Bug reports** – Help us uncover and squash issues
-- **Feedback & ideas** – Tell us what works, what doesn't, and what could be even better
-- **Documentation improvements** – Suggest clarity improvements or highlight missing pieces
-
-## How to Provide Feedback
-
-### Bug Reports
-
-If you encounter a bug, please open an issue with the following information:
-
-1. **Description**: A clear description of the bug
-2. **Steps to Reproduce**: Detailed steps to reproduce the issue
-3. **Expected Behavior**: What you expected to happen
-4. **Actual Behavior**: What actually happened
-5. **Environment**:
-   - Python version
-   - Operating system
-   - Bloom version
-6. **Error Messages**: Any error messages or stack traces
-7. **Configuration**: Relevant parts of your `config.toml` (redact any sensitive information)
-
-### Feature Requests and Feedback
-
-We'd love to hear your ideas! When submitting feedback or feature request discussions:
-
-1. **Avoid duplicates**: Check opened discussions before creating a new one
-2. **Clear Description**: Explain what you'd like to see or improve
-3. **Use Case**: Describe your use case and why this would be valuable
-4. **Alternatives**: If applicable, mention any alternatives you've considered
-
-## Development Setup
-
-This section is for developers who want to set up the repository for local development, even though we're not currently accepting contributions.
+## Getting Started
 
 ### Prerequisites
 
 - Python 3.12 or higher
-- [uv](https://github.com/astral-sh/uv) - Modern Python package manager
+- [uv](https://github.com/astral-sh/uv) — Modern Python package manager
 
 ### Setup
 
-1. Clone the repository:
+1. Fork and clone the repository:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/<your-username>/bloom-cli.git
    cd bloom-cli
    ```
 
@@ -62,28 +31,18 @@ This section is for developers who want to set up the repository for local devel
    uv sync --all-extras
    ```
 
-   This will install both runtime and development dependencies.
-
-3. (Optional) Install pre-commit hooks:
+3. Install pre-commit hooks:
 
    ```bash
    uv run pre-commit install
    ```
 
-   Pre-commit hooks will automatically run checks before each commit.
+## Development Workflow
 
 ### Running Tests
 
-Run all tests:
-
 ```bash
 uv run pytest
-```
-
-Run tests with verbose output:
-
-```bash
-uv run pytest -v
 ```
 
 Run a specific test file:
@@ -92,78 +51,67 @@ Run a specific test file:
 uv run pytest tests/test_agent_tool_call.py
 ```
 
-### Linting and Type Checking
+### Linting and Formatting
 
-#### Ruff (Linting and Formatting)
-
-Check for linting issues (without fixing):
+Check for issues:
 
 ```bash
 uv run ruff check .
 ```
 
-Auto-fix linting issues:
+Auto-fix and format:
 
 ```bash
 uv run ruff check --fix .
-```
-
-Format code:
-
-```bash
 uv run ruff format .
 ```
 
-Check formatting without modifying files (useful for CI):
-
-```bash
-uv run ruff format --check .
-```
-
-#### Pyright (Type Checking)
-
-Run type checking:
+### Type Checking
 
 ```bash
 uv run pyright
 ```
 
-#### Pre-commit Hooks
+### Pre-commit Hooks
 
-Run all pre-commit hooks manually:
+Run all hooks manually:
 
 ```bash
 uv run pre-commit run --all-files
 ```
 
-The pre-commit hooks include:
+Hooks include: Ruff (lint/format), Pyright (types), Typos (spelling), YAML/TOML validation, and GitHub Actions validation.
 
-- Ruff (linting and formatting)
-- Pyright (type checking)
-- Typos (spell checking)
-- YAML/TOML validation
-- Action validator (for GitHub Actions)
-
-### Code Style
+## Code Style
 
 - **Line length**: 88 characters (Black-compatible)
 - **Type hints**: Required for all functions and methods
-- **Docstrings**: Follow Google-style docstrings
-- **Formatting**: Use Ruff for both linting and formatting
-- **Type checking**: Use Pyright (configured in `pyproject.toml`)
+- **Docstrings**: Google-style
+- **Formatting**: Ruff for linting and formatting
+- **Type checking**: Pyright (configured in `pyproject.toml`)
 
-See `pyproject.toml` for detailed configuration of Ruff and Pyright.
+See `pyproject.toml` for detailed configuration.
 
-## Code Contributions
+## Submitting a Pull Request
 
-While we're not accepting code contributions at the moment, we may open up contributions in the future. When that happens, we'll update this document with:
+1. Create a feature branch from `main`
+2. Make your changes with clear, focused commits
+3. Ensure all tests pass and linting is clean
+4. Open a pull request describing what you changed and why
 
-- Pull request process
-- Contribution guidelines
-- Review process
+## Bug Reports
+
+When filing a bug report, please include:
+
+1. **Description**: A clear description of the bug
+2. **Steps to Reproduce**: How to trigger the issue
+3. **Expected vs Actual Behavior**: What you expected and what happened
+4. **Environment**: Python version, OS, Bloom version
+5. **Error Messages**: Any stack traces or error output
+6. **Configuration**: Relevant `config.toml` settings (redact sensitive info)
 
 ## Questions?
 
-If you have questions about using Bloom, please check the [README](README.md) first. For other inquiries, feel free to open a discussion or issue.
+Check the [README](README.md) first. For other questions, open a discussion or issue.
 
-Thank you for helping make Bloom better! 🙏
+Thanks for helping make Bloom better!

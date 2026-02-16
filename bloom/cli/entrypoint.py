@@ -80,7 +80,7 @@ def parse_arguments() -> argparse.Namespace:
         "--model",
         type=str,
         metavar="MODEL",
-        help="Model to use (e.g., glm-5, deepseek, qwen-coder, mistral)",
+        help="Model to use (e.g., glm, deepseek, qwen-coder)",
     )
     parser.add_argument("--setup", action="store_true", help="Setup API key and exit")
     parser.add_argument(
