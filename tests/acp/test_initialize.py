@@ -25,7 +25,7 @@ class TestACPInitialize:
             ),
         )
         assert response.agent_info == Implementation(
-            name="@ilm-alan/bloom-cli", title="Bloom", version="0.1.0"
+            name="@ilm-alan/bloom-cli", title="Bloom", version="0.1.1"
         )
 
         assert response.auth_methods == []
@@ -48,7 +48,7 @@ class TestACPInitialize:
             ),
         )
         assert response.agent_info == Implementation(
-            name="@ilm-alan/bloom-cli", title="Bloom", version="0.1.0"
+            name="@ilm-alan/bloom-cli", title="Bloom", version="0.1.1"
         )
 
         assert response.auth_methods is not None

@@ -26,7 +26,7 @@ from tests.update_notifier.adapters.fake_update_cache_repository import (
 )
 from tests.update_notifier.adapters.fake_update_gateway import FakeUpdateGateway
 
-TEST_CURRENT_VERSION = "0.1.0"
+TEST_CURRENT_VERSION = "0.1.1"
 
 
 @pytest.fixture
@@ -98,7 +98,7 @@ async def test_ui_displays_update_notification(
     assert notification.title == "Update available"
     assert (
         notification.message
-        == "0.1.0 => 0.2.0\nPlease update bloom-cli with your package manager"
+        == "0.1.1 => 0.2.0\nPlease update bloom-cli with your package manager"
     )
 
 
@@ -190,7 +190,7 @@ async def test_ui_does_show_toast_when_cache_entry_is_too_old(
     assert notification.title == "Update available"
     assert (
         notification.message
-        == "0.1.0 => 0.2.0\nPlease update bloom-cli with your package manager"
+        == "0.1.1 => 0.2.0\nPlease update bloom-cli with your package manager"
     )
     assert notifier.fetch_update_calls == 1
 
@@ -361,7 +361,7 @@ async def test_ui_displays_success_notification_when_auto_update_succeeds(
     assert notification.title == "Update successful"
     assert (
         notification.message
-        == "0.1.0 => 0.2.0\nBloom was updated successfully. Please restart to use the new version."
+        == "0.1.1 => 0.2.0\nBloom was updated successfully. Please restart to use the new version."
     )
 
 
@@ -385,5 +385,5 @@ async def test_ui_displays_update_notification_when_auto_update_fails(
     assert notification.title == "Update available"
     assert (
         notification.message
-        == "0.1.0 => 0.2.0\nPlease update bloom-cli with your package manager"
+        == "0.1.1 => 0.2.0\nPlease update bloom-cli with your package manager"
     )
