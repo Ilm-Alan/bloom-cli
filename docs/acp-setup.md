@@ -29,7 +29,7 @@ Add Bloom in the acp_providers section of your configuration
     ["bloom-cli"] = {
       command = "bloom-acp",
       env = {
-         MISTRAL_API_KEY = os.getenv("MISTRAL_API_KEY"), -- necessary if you setup Bloom manually
+         POLLINATIONS_API_KEY = os.getenv("POLLINATIONS_API_KEY"), -- necessary if you setup Bloom manually
       },
     }
   }
