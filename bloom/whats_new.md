@@ -1,5 +1,7 @@
 # What's New in Bloom 0.1.2
 
-- **Clean launches** — No more phantom update warnings. Bloom now checks for updates against the right package, so your terminal stays quiet unless there's actually something new.
+- **Meet the bee** — Bloom has a new animated mascot buzzing in your banner.
 
-- **Bloom is its own thing now** — Fully decoupled from the upstream fork. Version checks, auto-updates, and changelogs all point home.
+- **Multi-model support** — Switch between models on the fly with /config. Use whatever fits the task.
+
+- **Clean launches** — No more phantom update warnings. Your terminal stays quiet unless there's actually something new.
