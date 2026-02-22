@@ -1320,7 +1320,7 @@ def _print_session_resume_message(session_id: str | None) -> None:
 
 
 def run_textual_ui(agent_loop: AgentLoop, initial_prompt: str | None = None) -> None:
-    update_notifier = PyPIUpdateGateway(project_name="pollinations-cli")
+    update_notifier = PyPIUpdateGateway(project_name="bloom-cli")
     update_cache_repository = FileSystemUpdateCacheRepository()
     app = BloomApp(
         agent_loop=agent_loop,
